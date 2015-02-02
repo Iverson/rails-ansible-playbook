@@ -1,0 +1,17 @@
+---
+- name: Setup server configuration for rails app
+  hosts: all
+  sudo: true
+  vars_files:
+    - vars/defaults.yml
+  roles:
+    - ruby
+    - deploy
+    - nginx
+    - node
+    - postgres
+    - puma
+
+  handlers: 
+    - name: Restart puma
+      action: service name=puma state=restarted

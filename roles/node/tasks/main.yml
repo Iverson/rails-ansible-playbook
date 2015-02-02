@@ -1,0 +1,8 @@
+- name: add node repo
+  apt_repository: repo=ppa:chris-lea/node.js
+
+- name: update apt
+  command: sudo apt-get update
+
+- name: install node packages
+  apt: name=nodejs state=latest update_cache=yes

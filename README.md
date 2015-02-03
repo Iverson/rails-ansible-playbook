@@ -48,6 +48,14 @@ bundle install
 cap install
 ```
 
+add to  `Capfile`
+
+```
+require 'capistrano/rails'
+require 'capistrano/bundler'
+require 'capistrano/puma'
+```
+
 open `config/deploy/production.rb` and define in  params:
 
 ```

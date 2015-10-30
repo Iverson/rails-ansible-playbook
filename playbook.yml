@@ -1,5 +1,5 @@
 ---
-- name: Setup server configuration for rails app
+- name: Setup server configuration for Rails 4 app
   hosts: all
   sudo: true
   vars_files:
@@ -10,4 +10,3 @@
     - nginx
     - node
     - postgres
-    - puma

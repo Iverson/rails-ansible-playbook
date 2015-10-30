@@ -29,6 +29,6 @@
   sudo_user: postgres
 
 - name: create the postgresql database for application
-  postgresql_db: name=app_{{app_name}} owner=deploy state=present
+  postgresql_db: name=app_{{app_name}}_{{env}} owner=deploy state=present
   sudo: yes
   sudo_user: postgres

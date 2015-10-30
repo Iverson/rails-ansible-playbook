@@ -67,6 +67,9 @@ Vagrant.configure(2) do |config|
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "playbook.yml"
     # ansible.verbose  = "vvvv"
-    ansible.extra_vars = { ansible_ssh_user: 'vagrant' }
+    ansible.extra_vars = {
+      ansible_ssh_user: 'vagrant',
+      secret: '2a8bf1fe9da624900ac2aa14f69f8aaeb1c1810ded973321e8406d0e4fed9ab1e652c59c13417b9bd7cae124b77b25567de5d8e7186d0c94f522a452af4c7ab7'
+    }
   end
 end

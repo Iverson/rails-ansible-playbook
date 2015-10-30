@@ -3,8 +3,9 @@
 webserver_name: railsapp.com
 app_name: railsapp
 deploy_directory: /www/{{app_name}}
+env: staging
 
-## stolen from https://github.com/jgrowl/ansible-playbook-ruby-from-src
+## ruby from sources
 rubyTmpDir: /usr/local/src
 rubyUrl: http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz
 rubyCompressedFile: ruby-2.1.5.tar.gz
